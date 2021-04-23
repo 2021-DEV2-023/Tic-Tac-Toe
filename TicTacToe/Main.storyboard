@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,105 +18,232 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dbz-3A-fDY">
                                 <rect key="frame" x="0.0" y="44" width="414" height="60"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ksM-aD-ybh">
-                                        <rect key="frame" x="8" y="8" width="87" height="18"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cross" translatesAutoresizingMaskIntoConstraints="NO" id="ITZ-14-fpc">
-                                                <rect key="frame" x="0.0" y="0.0" width="18" height="18"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="18" id="g21-Wz-YWs"/>
-                                                    <constraint firstAttribute="height" constant="18" id="jds-Dk-vY6"/>
-                                                </constraints>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PL6-FK-APl">
-                                                <rect key="frame" x="26" y="0.0" width="61" height="18"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hQL-On-C5k">
-                                        <rect key="frame" x="8" y="34" width="87" height="18"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle" translatesAutoresizingMaskIntoConstraints="NO" id="5hm-m4-RE9">
-                                                <rect key="frame" x="0.0" y="0.0" width="18" height="18"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="18" id="X3r-EP-hef"/>
-                                                    <constraint firstAttribute="width" constant="18" id="egd-iK-GmI"/>
-                                                </constraints>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8FZ-82-m2F">
-                                                <rect key="frame" x="26" y="0.0" width="61" height="18"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cross" translatesAutoresizingMaskIntoConstraints="NO" id="ITZ-14-fpc">
+                                        <rect key="frame" x="8" y="8" width="18" height="18"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="18" id="g21-Wz-YWs"/>
+                                            <constraint firstAttribute="height" constant="18" id="jds-Dk-vY6"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PL6-FK-APl">
+                                        <rect key="frame" x="34" y="7" width="58.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle" translatesAutoresizingMaskIntoConstraints="NO" id="5hm-m4-RE9">
+                                        <rect key="frame" x="8" y="34" width="18" height="18"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="18" id="X3r-EP-hef"/>
+                                            <constraint firstAttribute="width" constant="18" id="egd-iK-GmI"/>
+                                        </constraints>
+                                    </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZO-mR-Hhk">
                                         <rect key="frame" x="340" y="15" width="66" height="30"/>
                                         <state key="normal" title="PlayAgain"/>
+                                        <connections>
+                                            <action selector="playAgainHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0FC-Ms-aMx"/>
+                                        </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8FZ-82-m2F">
+                                        <rect key="frame" x="34" y="33" width="61" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="hQL-On-C5k" firstAttribute="trailing" secondItem="ksM-aD-ybh" secondAttribute="trailing" id="Bb5-l4-m79"/>
-                                    <constraint firstItem="hQL-On-C5k" firstAttribute="leading" secondItem="dbz-3A-fDY" secondAttribute="leading" constant="8" id="In1-OM-zJP"/>
+                                    <constraint firstItem="PL6-FK-APl" firstAttribute="leading" secondItem="ITZ-14-fpc" secondAttribute="trailing" constant="8" id="9Am-2z-UvY"/>
+                                    <constraint firstAttribute="bottom" secondItem="5hm-m4-RE9" secondAttribute="bottom" constant="8" id="F1f-Gc-aQz"/>
+                                    <constraint firstItem="ITZ-14-fpc" firstAttribute="top" secondItem="dbz-3A-fDY" secondAttribute="top" constant="8" id="HaV-sa-iVk"/>
+                                    <constraint firstItem="5hm-m4-RE9" firstAttribute="top" secondItem="ITZ-14-fpc" secondAttribute="bottom" constant="8" id="Lok-vR-eGg"/>
                                     <constraint firstItem="NZO-mR-Hhk" firstAttribute="top" secondItem="dbz-3A-fDY" secondAttribute="top" constant="15" id="O0d-hk-pwH"/>
-                                    <constraint firstAttribute="bottom" secondItem="hQL-On-C5k" secondAttribute="bottom" constant="8" id="P23-u5-Boi"/>
                                     <constraint firstAttribute="trailing" secondItem="NZO-mR-Hhk" secondAttribute="trailing" constant="8" id="Ri8-VS-wIp"/>
-                                    <constraint firstItem="ksM-aD-ybh" firstAttribute="top" secondItem="dbz-3A-fDY" secondAttribute="top" constant="8" id="dXZ-lz-AWZ"/>
-                                    <constraint firstItem="hQL-On-C5k" firstAttribute="top" secondItem="ksM-aD-ybh" secondAttribute="bottom" constant="8" id="gbk-kj-0k2"/>
+                                    <constraint firstItem="8FZ-82-m2F" firstAttribute="centerY" secondItem="5hm-m4-RE9" secondAttribute="centerY" id="Ume-e3-HcJ"/>
+                                    <constraint firstItem="ITZ-14-fpc" firstAttribute="leading" secondItem="dbz-3A-fDY" secondAttribute="leading" constant="8" id="WQJ-L3-3Mk"/>
+                                    <constraint firstItem="8FZ-82-m2F" firstAttribute="leading" secondItem="5hm-m4-RE9" secondAttribute="trailing" constant="8" id="dfM-wZ-EBd"/>
+                                    <constraint firstItem="5hm-m4-RE9" firstAttribute="leading" secondItem="dbz-3A-fDY" secondAttribute="leading" constant="8" id="g0p-6r-R9j"/>
                                     <constraint firstAttribute="bottom" secondItem="NZO-mR-Hhk" secondAttribute="bottom" constant="15" id="i2l-Js-2Ea"/>
-                                    <constraint firstItem="ksM-aD-ybh" firstAttribute="leading" secondItem="dbz-3A-fDY" secondAttribute="leading" constant="8" id="pSt-HI-NaL"/>
+                                    <constraint firstItem="PL6-FK-APl" firstAttribute="centerY" secondItem="ITZ-14-fpc" secondAttribute="centerY" id="zT8-s8-j4p"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rs4-6j-LXn">
                                 <rect key="frame" x="8" y="254" width="398" height="398"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="oNT-Ut-Bab">
-                                        <rect key="frame" x="0.0" y="0.0" width="398" height="398"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="oNT-Ut-Bab">
+                                        <rect key="frame" x="0.0" y="4" width="398" height="390"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5EH-Va-d4n">
-                                                <rect key="frame" x="0.0" y="0.0" width="398" height="132.5"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="5EH-Va-d4n">
+                                                <rect key="frame" x="4" y="0.0" width="390" height="127.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dxX-kg-NYo" customClass="BoardButton" customModule="TicTacToe" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="127.5" height="127.5"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="boardButtonHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tzu-ZL-1ta"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J68-CA-Cg8" customClass="BoardButton" customModule="TicTacToe" customModuleProvider="target">
+                                                        <rect key="frame" x="131.5" y="0.0" width="127" height="127.5"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="boardButtonHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JKi-NG-28W"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dIF-Yz-ktM" customClass="BoardButton" customModule="TicTacToe" customModuleProvider="target">
+                                                        <rect key="frame" x="262.5" y="0.0" width="127.5" height="127.5"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="boardButtonHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2MF-PS-77q"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cU3-RH-zsG">
-                                                <rect key="frame" x="0.0" y="132.5" width="398" height="133"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="fDl-cE-E0E">
+                                                <rect key="frame" x="4" y="131.5" width="390" height="127"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vqb-Dk-eQ0" customClass="BoardButton" customModule="TicTacToe" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="127.5" height="127"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="boardButtonHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aqa-7e-Je5"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WV5-eg-jSA" customClass="BoardButton" customModule="TicTacToe" customModuleProvider="target">
+                                                        <rect key="frame" x="131.5" y="0.0" width="127" height="127"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="boardButtonHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ObW-VT-dg6"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJe-gN-eef" customClass="BoardButton" customModule="TicTacToe" customModuleProvider="target">
+                                                        <rect key="frame" x="262.5" y="0.0" width="127.5" height="127"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="boardButtonHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E2w-p5-NNq"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bMY-ae-Vu9">
-                                                <rect key="frame" x="0.0" y="265.5" width="398" height="132.5"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="0eo-ZX-A26">
+                                                <rect key="frame" x="4" y="262.5" width="390" height="127.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YUG-ig-bNk" customClass="BoardButton" customModule="TicTacToe" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="127.5" height="127.5"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="boardButtonHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yxz-CF-xpf"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9o-c4-sdv" customClass="BoardButton" customModule="TicTacToe" customModuleProvider="target">
+                                                        <rect key="frame" x="131.5" y="0.0" width="127" height="127.5"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="boardButtonHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kIv-rp-brt"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cs5-em-WYx" customClass="BoardButton" customModule="TicTacToe" customModuleProvider="target">
+                                                        <rect key="frame" x="262.5" y="0.0" width="127.5" height="127.5"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="boardButtonHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W0M-J2-Lef"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
                                             </stackView>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="0eo-ZX-A26" firstAttribute="leading" secondItem="oNT-Ut-Bab" secondAttribute="leading" constant="4" id="0bh-KH-nqY"/>
+                                            <constraint firstAttribute="trailing" secondItem="fDl-cE-E0E" secondAttribute="trailing" constant="4" id="9Kh-cW-Es4"/>
+                                            <constraint firstAttribute="trailing" secondItem="0eo-ZX-A26" secondAttribute="trailing" constant="4" id="dVW-nF-1K7"/>
+                                            <constraint firstItem="fDl-cE-E0E" firstAttribute="leading" secondItem="oNT-Ut-Bab" secondAttribute="leading" constant="4" id="lP9-l1-S2x"/>
+                                            <constraint firstAttribute="trailing" secondItem="5EH-Va-d4n" secondAttribute="trailing" constant="4" id="pq9-pg-NPx"/>
+                                            <constraint firstItem="5EH-Va-d4n" firstAttribute="leading" secondItem="oNT-Ut-Bab" secondAttribute="leading" constant="4" id="voi-yn-K5C"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="oNT-Ut-Bab" secondAttribute="trailing" id="5F3-HW-5Re"/>
                                     <constraint firstAttribute="width" secondItem="Rs4-6j-LXn" secondAttribute="height" multiplier="1:1" id="IYw-YD-LGG"/>
-                                    <constraint firstAttribute="bottom" secondItem="oNT-Ut-Bab" secondAttribute="bottom" id="Yii-RJ-BXD"/>
-                                    <constraint firstItem="oNT-Ut-Bab" firstAttribute="top" secondItem="Rs4-6j-LXn" secondAttribute="top" id="c6s-Uu-RPw"/>
+                                    <constraint firstAttribute="bottom" secondItem="oNT-Ut-Bab" secondAttribute="bottom" constant="4" id="Yii-RJ-BXD"/>
+                                    <constraint firstItem="oNT-Ut-Bab" firstAttribute="top" secondItem="Rs4-6j-LXn" secondAttribute="top" constant="4" id="c6s-Uu-RPw"/>
                                     <constraint firstItem="oNT-Ut-Bab" firstAttribute="leading" secondItem="Rs4-6j-LXn" secondAttribute="leading" id="uBh-3Q-obd"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GTd-kQ-G3e">
+                                <rect key="frame" x="207" y="124" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dbz-3A-fDY" secondAttribute="trailing" id="0CU-h1-dka"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Rs4-6j-LXn" secondAttribute="trailing" constant="8" id="3Ho-sM-qe9"/>
                             <constraint firstItem="dbz-3A-fDY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="93Q-Q5-3Ez"/>
                             <constraint firstItem="Rs4-6j-LXn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="Ci8-Uo-lK2"/>
+                            <constraint firstItem="GTd-kQ-G3e" firstAttribute="top" secondItem="dbz-3A-fDY" secondAttribute="bottom" constant="20" id="Iwp-oo-hGY"/>
+                            <constraint firstItem="GTd-kQ-G3e" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Zrt-tb-9N0"/>
                             <constraint firstItem="dbz-3A-fDY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aOi-gu-QfF"/>
                             <constraint firstItem="Rs4-6j-LXn" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="b9I-AG-4Dg"/>
                             <constraint firstItem="Rs4-6j-LXn" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="q0g-Lz-80a"/>
+                            <constraint firstItem="Rs4-6j-LXn" firstAttribute="top" relation="greaterThanOrEqual" secondItem="GTd-kQ-G3e" secondAttribute="bottom" constant="20" id="z0u-K9-j5P"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="gameContainer" destination="Rs4-6j-LXn" id="6K2-ej-RfE"/>
                         <outlet property="gameContainerView" destination="Rs4-6j-LXn" id="lwg-Ks-RRU"/>
                         <outlet property="playAgainButton" destination="NZO-mR-Hhk" id="rSs-9C-Gyg"/>
                         <outlet property="playerOneLabel" destination="PL6-FK-APl" id="Lt8-y4-j9R"/>
                         <outlet property="playerTwoLabel" destination="8FZ-82-m2F" id="pl0-zJ-eOe"/>
+                        <outlet property="titleLabel" destination="GTd-kQ-G3e" id="Nlf-ll-2JN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -125,11 +251,37 @@
             <point key="canvasLocation" x="137.68115942028987" y="128.57142857142856"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="J68-CA-Cg8">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="WV5-eg-jSA">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="YUG-ig-bNk">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="b9o-c4-sdv">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="cs5-em-WYx">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="dIF-Yz-ktM">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="dxX-kg-NYo">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="hJe-gN-eef">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="vqb-Dk-eQ0">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+    </designables>
     <resources>
         <image name="circle" width="384" height="384"/>
         <image name="cross" width="384" height="384"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

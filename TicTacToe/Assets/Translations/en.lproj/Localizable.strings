@@ -3,3 +3,6 @@
 "boardvc_first_player_label" = "Player 1";
 "boardvc_second_player_label" = "Player 2";
 "boardvc_play_again_button" = "Play again";
+"boardvc_title_current_player" = "%@'s turn";
+"boardvc_title_win" = "%@ WIN !";
+"boardvc_title_draw" = "Draw !";

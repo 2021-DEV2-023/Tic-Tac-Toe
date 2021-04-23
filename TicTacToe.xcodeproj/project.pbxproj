@@ -23,8 +23,11 @@
 		A000697A262F0676007217A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0006979262F0676007217A5 /* SceneDelegate.swift */; };
 		A0006980262F07C9007217A5 /* UIImage+assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = A000697F262F07C9007217A5 /* UIImage+assets.swift */; };
 		A00069A1262F083F007217A5 /* PlayersType+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00069A0262F083F007217A5 /* PlayersType+UI.swift */; };
-		A00069AA2631658E007217A5 /* Translations.strings in Resources */ = {isa = PBXBuildFile; fileRef = A00069AC2631658E007217A5 /* Translations.strings */; };
+		A00069AA2631658E007217A5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A00069AC2631658E007217A5 /* Localizable.strings */; };
 		A00069B6263167D1007217A5 /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00069B5263167D1007217A5 /* String+Localized.swift */; };
+		A00069D726316FDA007217A5 /* BoardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00069D626316FDA007217A5 /* BoardButton.swift */; };
+		A00318E426319EDA00101BB9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A00069AC2631658E007217A5 /* Localizable.strings */; };
+		A00318E826319EDB00101BB9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A00069AC2631658E007217A5 /* Localizable.strings */; };
 		B9E388AF1D9AB808FD127E7D /* Pods_TicTacToe_TicTacToeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B6C2439B049A51CD3C0B58 /* Pods_TicTacToe_TicTacToeUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,9 +73,10 @@
 		A0006979262F0676007217A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A000697F262F07C9007217A5 /* UIImage+assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+assets.swift"; sourceTree = "<group>"; };
 		A00069A0262F083F007217A5 /* PlayersType+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlayersType+UI.swift"; sourceTree = "<group>"; };
-		A00069AB2631658E007217A5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Translations.strings; sourceTree = "<group>"; };
-		A00069B026316591007217A5 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Translations.strings; sourceTree = "<group>"; };
+		A00069AB2631658E007217A5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A00069B026316591007217A5 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A00069B5263167D1007217A5 /* String+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
+		A00069D626316FDA007217A5 /* BoardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardButton.swift; sourceTree = "<group>"; };
 		AC844828C0BB6B595638EE4A /* Pods-TicTacToe-TicTacToeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TicTacToe-TicTacToeUITests.release.xcconfig"; path = "Target Support Files/Pods-TicTacToe-TicTacToeUITests/Pods-TicTacToe-TicTacToeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B16931BEA5F7E7914026539F /* Pods_TicTacToeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TicTacToeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7B6C2439B049A51CD3C0B58 /* Pods_TicTacToe_TicTacToeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TicTacToe_TicTacToeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -222,7 +226,7 @@
 		A0006959262F0560007217A5 /* Translations */ = {
 			isa = PBXGroup;
 			children = (
-				A00069AC2631658E007217A5 /* Translations.strings */,
+				A00069AC2631658E007217A5 /* Localizable.strings */,
 			);
 			path = Translations;
 			sourceTree = "<group>";
@@ -263,8 +267,17 @@
 		A00069BE26316994007217A5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A00069DE26316FE2007217A5 /* BoardButton */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		A00069DE26316FE2007217A5 /* BoardButton */ = {
+			isa = PBXGroup;
+			children = (
+				A00069D626316FDA007217A5 /* BoardButton.swift */,
+			);
+			path = BoardButton;
 			sourceTree = "<group>";
 		};
 		FDD3E25690BE25311BA94815 /* Frameworks */ = {
@@ -386,7 +399,7 @@
 			files = (
 				A0006972262F05FD007217A5 /* Main.storyboard in Resources */,
 				A00068F2262EFB26007217A5 /* Assets.xcassets in Resources */,
-				A00069AA2631658E007217A5 /* Translations.strings in Resources */,
+				A00069AA2631658E007217A5 /* Localizable.strings in Resources */,
 				A000696C262F05ED007217A5 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,6 +408,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A00318E426319EDA00101BB9 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +416,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A00318E826319EDB00101BB9 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,6 +498,7 @@
 			files = (
 				A00069A1262F083F007217A5 /* PlayersType+UI.swift in Sources */,
 				A0006980262F07C9007217A5 /* UIImage+assets.swift in Sources */,
+				A00069D726316FDA007217A5 /* BoardButton.swift in Sources */,
 				A00069B6263167D1007217A5 /* String+Localized.swift in Sources */,
 				A000697A262F0676007217A5 /* SceneDelegate.swift in Sources */,
 				A00068ED262EFB24007217A5 /* BoardVC.swift in Sources */,
@@ -526,13 +542,13 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A00069AC2631658E007217A5 /* Translations.strings */ = {
+		A00069AC2631658E007217A5 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				A00069AB2631658E007217A5 /* en */,
 				A00069B026316591007217A5 /* fr */,
 			);
-			name = Translations.strings;
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
